@@ -1,0 +1,13 @@
+ <!DOCTYPE html>
+<?!= HtmlService.createHtmlOutputFromFile("styles.css.html").getContent(); ?>
+
+<div class="content">
+  <h1>Visao Geral OLX - Joana</h1>
+  <input class="button" type="submit" value="Refresh" id="refresh"><br>
+  <svg class="chart"></svg>
+</div>
+
+<script src="https://d3js.org/d3.v3.min.js"></script>
+<?!= HtmlService.createHtmlOutputFromFile("main.js.html").getContent(); ?>
+<?!= HtmlService.createHtmlOutputFromFile("chart.js.html").getContent(); ?>
+
