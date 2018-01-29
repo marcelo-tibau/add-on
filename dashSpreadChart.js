@@ -1,5 +1,5 @@
 function doGet() {
-    var spreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1gw2yfY0_-RUxGqO6tGUSsB-JoVoNWJp21c1TxVztLUw/';
+    var spreadsheetUrl = 'https://docs.google.com/spreadsheets/d/XXXXputYourSpreadsheetIdHereXXX/';
     var sheetName = 'VisaoGeral';
     var ss = SpreadsheetApp.openByUrl(spreadsheetUrl);
     var sheet = ss.getSheetByName(sheetName);
