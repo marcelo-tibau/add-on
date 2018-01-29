@@ -5,7 +5,7 @@ function doGet(e) {
 }
 
 function getChartData() {
-    var spreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1w9in2CLXG2st6uWOPuR6v7YNhPOikfQ6-7oPqtvzS8o/';
+    var spreadsheetUrl = 'https://docs.google.com/spreadsheets/d/XXXXXputYourSpreadsheetIdHereXXX/';
     var sheetName = 'VisaoGeral';
     var ss = SpreadsheetApp.openByUrl(spreadsheetUrl);
     var sheet = ss.getSheetByName(sheetName);
