@@ -41,7 +41,7 @@ function Copy() {
 
     var data = range.getValues();
 
-    var tss = SpreadsheetApp.openById('1EdwVkrn_TRJszU8OrD1Vy_bX9dsFEZ63Y3LjbIbLtCQ'); //replace with destination ID
+    var tss = SpreadsheetApp.openById('XXXXXXXXXXXXXXXXXX'); //replace with destination ID
 
     var ts = tss.getSheetByName('savedData'); // replace with destination Sheet tab name
     ts.getRange(ts.getLastRow()+1, 1, data.length, data[0].length).setValues(data); // already defined to get the size of the copied data automatically
