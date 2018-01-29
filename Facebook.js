@@ -2,8 +2,8 @@
 ///// Codes to create and authorize OAuth2 tokens as well as refresh them when they expire
 
 // /// Access info
- var CLIENT_ID = '216939128837482';
- var APP_SECRET = '9bfce89c5b5569da73fe89e7871397b0';
+var CLIENT_ID = '0000000000'; // replace with our client ID
+var APP_SECRET = 'XXXXXXXXX'; // replace with your data
  var PAGE_ID = getActiveCell('B2');
  var api_version = 'v2.10';
  var post_id = getActiveCell('B3');
@@ -95,7 +95,7 @@ function logRedirectUri() {
 
 /// Codes to create the scraper
 function fbScraper() {
-    var response = UrlFetchApp.fetch('https://graph.facebook.com/v2.10/5281959998_10151375024894999/reactions?summary=1&&fields=reactions.type(LIKE).limit(0).summary(total_count).as(reactions_like),reactions.type(LOVE).limit(0).summary(total_count).as(reactions_love),reactions.type(WOW).limit(0).summary(total_count).as(reactions_wow),reactions.type(SAD).limit(0).summary(total_count).as(reactions_sad),reactions.type(HAHA).limit(0).summary(total_count).as(reactions_haha),reactions.type(ANGRY).limit(0).summary(total_count).as(reactions_angry)&access_token=EAACEdEose0cBACZBZB8zum2NcPNLz2zBieUedIpwVTZC12rcLU0RBn1YZAJEu5ZBELUSWmv9YhCRZA5e9px9szM39ybsylcs6XZAmu2oUn1snEeRNKmQCB4EtdpgtkJmCxhhUQ0fSLeLRqm6TKLszqakCNroh5lSFQ0arbNK78myqJOFcpU1PB5MkwZB1AhWulIZD');
+    var response = UrlFetchApp.fetch('https://graph.facebook.com/v2.10/useNumberOfYourPostId/reactions?summary=1&&fields=reactions.type(LIKE).limit(0).summary(total_count).as(reactions_like),reactions.type(LOVE).limit(0).summary(total_count).as(reactions_love),reactions.type(WOW).limit(0).summary(total_count).as(reactions_wow),reactions.type(SAD).limit(0).summary(total_count).as(reactions_sad),reactions.type(HAHA).limit(0).summary(total_count).as(reactions_haha),reactions.type(ANGRY).limit(0).summary(total_count).as(reactions_angry)&access_token=XXXXXXXXXuseYourAccessToken');
   var json = response.getContentText();
   var rawdata = JSON.parse(json);
   var rawdata = JSON.parse(response.getContentText());
@@ -107,7 +107,7 @@ function fbScraper() {
 
 /// Scraper parsing csv file
 function fbScraperCsv() {
-    var response = UrlFetchApp.fetch('https://graph.facebook.com/v2.10/5281959998_10151375024894999/reactions?summary=1&&fields=reactions.type(LIKE).limit(0).summary(total_count).as(reactions_like),reactions.type(LOVE).limit(0).summary(total_count).as(reactions_love),reactions.type(WOW).limit(0).summary(total_count).as(reactions_wow),reactions.type(SAD).limit(0).summary(total_count).as(reactions_sad),reactions.type(HAHA).limit(0).summary(total_count).as(reactions_haha),reactions.type(ANGRY).limit(0).summary(total_count).as(reactions_angry)&access_token=EAACEdEose0cBAKGGoFZAUuQ4VaGGZAONuThmiLZBpgzm8lsmJQ54UwyWoM96qLlxiZCIqGn3Svs0v6IDKs6iPAI9mJ5bpRXUaG6Og3OMZBCgBc2FskY8zls34yX4MHTBUEfZBZBUYXQ1xv4ZBnAyUVNd0IEOGAZBujCKrtEwtqTTP1QJ4R56eLfc9QZCKwN99agF4ZD');
+    var response = UrlFetchApp.fetch('https://graph.facebook.com/v2.10/useNumberOfYourPostId/reactions?summary=1&&fields=reactions.type(LIKE).limit(0).summary(total_count).as(reactions_like),reactions.type(LOVE).limit(0).summary(total_count).as(reactions_love),reactions.type(WOW).limit(0).summary(total_count).as(reactions_wow),reactions.type(SAD).limit(0).summary(total_count).as(reactions_sad),reactions.type(HAHA).limit(0).summary(total_count).as(reactions_haha),reactions.type(ANGRY).limit(0).summary(total_count).as(reactions_angry)&access_token=XXXXXXuseYourDataHere');
     var csvFile = "";
     csvFile = response.getContentText();
     var csvData = CSVToArray(csvFile, ",");
