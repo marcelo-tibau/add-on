@@ -7,7 +7,7 @@ function doGet(e) {
 
 /// get the chart data to pass through to front-end
 function getChartData(){
-    var ss = SpreadsheetApp.openById("1vx1MIM6k-c0Ht-GCRyab7rkBFQz3kFGrz1mYc3b98dE");
+    var ss = SpreadsheetApp.openById("XXXXXXputYour SpreadsheetIdHereXXXX");
     var sheet = ss.getActiveSheet();
 
     var headings = sheet.getRange(1,2,1,sheet.getLastColumn()).getValues()[0].map(function(heading) {
