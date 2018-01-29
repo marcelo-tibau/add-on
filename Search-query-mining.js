@@ -58,7 +58,7 @@ function main() {
 
     //////////////////////////////////////////////////////////////////////////////
     //  // Check if the spreadsheet has been entered, and that it works
-    if (spreadsheetUrl.replace(/[SearchQueryMining]/g, "X") == "https://docs.google.com/spreadsheets/d/1jpRbaO0HVIf_PYosvcu9TJqqKmv6WwVCS-ixcp6hBNI") {
+    if (spreadsheetUrl.replace(/[SearchQueryMining]/g, "X") == "https://docs.google.com/spreadsheets/d/spreadsheetIdEntersHere") {
         Logger.log("Problem with the spreadsheet URL: make sure you've replaces the default with a valid spreadsheet URL.");
         return;
     }
