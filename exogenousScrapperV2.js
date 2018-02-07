@@ -42,7 +42,7 @@ function openweathermap() {
 //openweathermap II
 function openweathermapII() {
     var url = "http://api.openweathermap.org/data/2.5/weather?q=[location]&apikey=[apikey]";
-    var location = 'Rio,br';
+    var location = 'YYY,yy'; // your location here
     var apikey = 'XXXXXXXXXX'; // replace with your api key
     var currentWeatherUrl = 'http://api.openweathermap.org/data/2.5/weather?q=' +
             location + '&apikey=' + apikey;
